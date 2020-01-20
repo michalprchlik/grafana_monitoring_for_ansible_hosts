@@ -10,7 +10,7 @@ Overview of the project:
 - one time installation and configuration
 - `grafana` and `influxdb` in docker
 - operation and usage of scanners is prepared in `ansible playbooks`
-- scanned computers are automatically registered in `grafana`
+- scanned computers are automatically registered/displayed in `grafana` without any additional configuration
 - semaphore approach helps to visualise issues on monitored servers (red = error, orange = warning, green = ok)
 - you can add scanning of your own values by changing `scanner\scanner.sh`
 - you can pass new configuration in [JSON](https://www.json.org/) format to scanner in `scanner\config.json`
