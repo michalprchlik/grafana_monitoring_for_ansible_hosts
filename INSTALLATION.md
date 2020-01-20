@@ -11,7 +11,7 @@ Quick steps:
 - open ports `3000` and `8086` on grafana server 
 - update `scanner\config.json` with `influxdb` IP address
 
-## Installation grafana and ifluxdb
+## Installation grafana and influxdb
 
 Docker installation
 
