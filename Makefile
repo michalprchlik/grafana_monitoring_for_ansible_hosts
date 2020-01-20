@@ -1,5 +1,5 @@
 install: 
-	docker network create influxdb
+	-docker network create influxdb
 	docker pull grafana/grafana
 	docker pull influxdb
 	mkdir -p grafana/cert
