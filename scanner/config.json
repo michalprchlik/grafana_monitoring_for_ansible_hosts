@@ -1,0 +1,7 @@
+{
+	"influx_url" : "http://172.18.0.2:8086/write?db=monitoring",
+	"scanner": 
+	{
+		"is_linux_monitoring_enabled": "1" 
+	}
+}

@@ -1,0 +1,24 @@
+---
+- name: Transfer and execute a script.
+  hosts: all
+  become: no
+  tasks:
+    - name: Create a directory if it does not exist
+      file:
+        path: ~/scanner
+        state: directory
+        mode: '0755'
+
+    - name: Transfer the scanner
+      copy: src=../scanner/scanner.sh dest=~/scanner/scanner.sh mode=0777
+
+    - name: Transfer the config
+      copy: src=../scanner/config.json dest=~/scanner/config.json  mode=0644
+
+    - name: Set up crontab job to periodically execute scanner
+      cron:
+        name: "scanner.sh"
+        minute: "*/5"
+        user: user
+        job: "~/scanner/scanner.sh >> /tmp/scanner.log 2>&1"
+        state: present

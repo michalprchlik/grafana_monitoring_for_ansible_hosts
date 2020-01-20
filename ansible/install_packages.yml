@@ -1,0 +1,22 @@
+---
+- name: Prepare enviroment for scanner
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install sysstat
+      block:
+      - package:
+          name: sysstat
+          state: present	
+
+    - name: Install bc
+      block:
+      - package:
+          name: bc
+          state: present	
+
+    - name: Install jq 
+      block:
+      - package:
+          name: jq
+          state: present	          

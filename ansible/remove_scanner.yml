@@ -1,0 +1,17 @@
+---
+- name: Remove scanner and config file from hosts
+  hosts: all
+  become: no
+  tasks:
+    - name: Recursively remove directory
+      file:
+        path: ~/scanner
+        state: absent
+
+    - name: Remove crontab job
+      cron:
+        name: "scanner.sh"
+        minute: "*/5"
+        user: user
+        job: "~/scanner/scanner.sh >> /tmp/scanner.log 2>&1"
+        state: absent
