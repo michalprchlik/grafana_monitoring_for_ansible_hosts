@@ -17,7 +17,7 @@ Overview of the project:
 - basic [capacity management](https://en.wikipedia.org/wiki/Capacity_management) monitoring to be more compliant with [ITIL](https://en.wikipedia.org/wiki/ITIL)   
 - computers are scanned for 11 different values (password expiration, disk usage, memory usage, etc.) 
 
-`Grafana` is configured with 3 dashboards:
+`Grafana` is configured with 3 dashboards (links in list below are links to pictures of dashboards):
 - dashboard with [list of all servers](images/server_overview.png) to **highlight issues** in server infrastructure (e.g. password on server XY will expire in 5 days)
 - every server have dashboard with [server detail](images/server_detail.png)
 - dashboard with [one year overview of infrastructure](images/server_big_picture.png) so you can check infrastructure workload in longer period
