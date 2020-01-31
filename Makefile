@@ -29,10 +29,10 @@ grafana-run:
 	-d \
 	-e GF_SERVER_PROTOCOL=https \
 	-e GF_SERVER_CERT_FILE=/var/lib/grafana/cert/grafana.crt \
-    -e GF_SERVER_CERT_KEY=/var/lib/grafana/cert/grafana.key \
+	-e GF_SERVER_CERT_KEY=/var/lib/grafana/cert/grafana.key \
 	-p "3000:3000" \
 	-v "${PWD}/grafana:/var/lib/grafana" \
-    grafana/grafana 
+	grafana/grafana 
 
 grafana-bash:
 	docker exec -it grafana bash
