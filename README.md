@@ -163,7 +163,3 @@ make grafana-run
 cd ansible
 ansible-playbook -i hosts install_scanner_to_cron.yml
 ```
-
-# Contact
-
-Maintainer - `michal.prchlik@cz.ibm.com`
